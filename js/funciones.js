@@ -49,19 +49,31 @@ const addToCart = (idH) => {
         id.addEventListener('click', () => {
             const cart = getCartLS();
             const product = productFinder(idH);
-            //console.log(`Se agrego el item ${idH} al carrito`)
-
             let found = cart.some((objeto) => objeto.id === Number(idH));
         
             if (found === false){
                 cart.push(product);
+                Toastify ({
+                    text: `${product.productName} agregado al carrito`,
+                    duration: 2500,
+                    gravity: "bottom",
+                    backgroundColor: "green",
+                    position: "right",
+                }).showToast();
                 cart[cart.length-1].cantidad++;
             }else{
-                //cart.indexOf(Number(idH))
-                console.log("potato")
                 let buscarIndex = cart.findIndex( function(objeto) {return objeto.id === Number(idH)})
-                console.log(buscarIndex) 
+                let forToasty = cart[buscarIndex]
+                Toastify ({
+                    text: `${forToasty.productName} agregado al carrito`,
+                    duration: 2500,
+                    gravity: "bottom",
+                    backgroundColor: "green",
+                    position: "right",
+                }).showToast();
                 cart[buscarIndex].cantidad++}
+                
+                
             saveCartLS(cart);
             renderCartSpan();
         })
