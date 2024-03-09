@@ -56,16 +56,12 @@ const addToCart = (idH) => {
             if (found === false){
                 cart.push(product);
                 cart[cart.length-1].cantidad++;
-                
-                
             }else{
                 //cart.indexOf(Number(idH))
                 console.log("potato")
                 let buscarIndex = cart.findIndex( function(objeto) {return objeto.id === Number(idH)})
                 console.log(buscarIndex) 
                 cart[buscarIndex].cantidad++}
-
-            //cart.push(product);
             saveCartLS(cart);
             renderCartSpan();
         })
@@ -80,7 +76,16 @@ const productFinder = (e) => {
 
 const cartBadge = document.getElementById('cartIconBadge');
 const renderCartSpan = () => {
-    cartBadge.innerText = getCartLS().length;    
+    const carrito = getCartLS()
+    const itemAmount = carrito.map((objeto) => { return objeto.cantidad})
+    const itemAmountCounter = itemAmount.reduce((acc,objeto) => {
+        return acc + objeto
+    },0)
+
+    console.log(itemAmount)
+    console.log(itemAmountCounter);
+    cartBadge.innerText=itemAmountCounter;
+    // cartBadge.innerText = getCartLS().length;
 };
 renderCartSpan()
 // eliminar carrito entero
