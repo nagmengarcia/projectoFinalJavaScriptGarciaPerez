@@ -56,4 +56,39 @@ function deleteSingleProduct(id){
 };
 
 
+let x = document.getElementById("minus-14")
 
+let y = document.getElementById("plus-14")
+
+
+x.addEventListener("click", function () {
+    let cart = getCartLS();
+    let buscador = cart.find( (objeto) => objeto.id === 14)
+    let encontrarIndex = cart.indexOf(buscador)
+    console.log(encontrarIndex)
+    if(cart[encontrarIndex].cantidad > 1) {
+        console.log(cart[encontrarIndex])
+        cart[encontrarIndex].cantidad--
+        console.log(cart[encontrarIndex].cantidad)
+        saveCartLS(cart)
+        renderFinalCart()
+        renderCartSpan()
+        window.location.reload()
+    }
+})
+
+y.addEventListener("click", function () {
+    let cart = getCartLS();
+    let buscador = cart.find( (objeto) => objeto.id === 14)
+    let encontrarIndex = cart.indexOf(buscador)
+    console.log(encontrarIndex)
+    if(cart[encontrarIndex].cantidad > 1) {
+        console.log(cart[encontrarIndex])
+        cart[encontrarIndex].cantidad++
+        console.log(cart[encontrarIndex].cantidad)
+        saveCartLS(cart)
+        renderFinalCart()
+        renderCartSpan()
+        window.location.reload()
+    }
+})

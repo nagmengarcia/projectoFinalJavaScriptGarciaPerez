@@ -427,4 +427,8 @@ body {
   gap: 16px;
 }
 
+.button-unactive {
+  background-color: #DDDDDD;
+}
+
 /*# sourceMappingURL=estilo.css.map */

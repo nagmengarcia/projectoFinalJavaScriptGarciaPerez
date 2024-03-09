@@ -112,3 +112,8 @@ const productDeleter = (e) => {
     const deleteItem = cart.filter(product => product.id !== e);
     return deleteItem;
 };
+
+
+
+
+
