@@ -1,0 +1,402 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header__banner {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 0.75rem;
+  text-align: center;
+  color: black;
+  background-color: #EE82FF;
+  padding: 0.5rem 0;
+}
+
+.header__nav {
+  background-color: #fefafa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  padding: 0 48px;
+  z-index: 99;
+}
+.header__nav .header__nav-options {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  align-items: center;
+  justify-items: center;
+  margin: 0;
+}
+.header__nav .header__nav-options .header__nav-dropdown {
+  border: none;
+  box-shadow: none;
+  background-color: #fefafa;
+}
+.header__nav .header__nav-options .header__nav-dropdown button {
+  border: none;
+  box-shadow: none;
+  background-color: #fefafa;
+}
+
+.cart {
+  width: 80px;
+  padding: 8px;
+  overflow: hidden;
+}
+.cart a {
+  color: black;
+  text-decoration: none;
+}
+
+.header__nav__logo {
+  height: 3rem;
+  justify-self: flex-start;
+}
+
+.badge-container {
+  position: relative;
+  top: -32px;
+  right: -16px;
+}
+
+.bdg {
+  background-color: red;
+  text-align: left;
+  border-radius: 1rem;
+  position: absolute;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fefafa;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 114px;
+  background-color: black;
+}
+.hero h1 {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  color: #fdfdfd;
+  position: absolute;
+  z-index: 5;
+  font-size: 4rem;
+}
+.hero img {
+  width: 100%;
+  opacity: 80%;
+}
+
+.home-info-container {
+  width: 100%;
+  background: linear-gradient(45deg, rgb(35, 102, 233) 0%, rgb(96, 147, 245) 100%);
+  margin: 0;
+}
+
+.payment-info {
+  padding: 80px 0;
+  width: calc(100% - 48px);
+}
+.payment-info .payment-info__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: calc(33% - 8px);
+}
+.payment-info .payment-info__section svg {
+  fill: white;
+}
+.payment-info .payment-info__section p {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 220px;
+  color: white;
+}
+
+.home_catalogo {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 72px 0;
+  background-color: #EFF1F5;
+}
+.home_catalogo .home_catalogo__container {
+  width: calc(100% - 128px);
+  gap: 0.5rem;
+}
+.home_catalogo .home_catalogo__options {
+  width: calc(33% - 0.5rem);
+  height: 420px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.home_catalogo .home_catalogo__options a {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+}
+.home_catalogo .home_catalogo__options:hover {
+  background-color: black;
+  background-image: none;
+  align-items: center;
+}
+.home_catalogo .home_catalogo__options:hover a {
+  opacity: 1;
+}
+.home_catalogo .optn-1 {
+  background-image: url(../imgs/home/equipos_internacionales.png);
+}
+.home_catalogo .optn-2 {
+  background-image: url(../imgs/home/equipos_nacionales.png);
+}
+.home_catalogo .optn-3 {
+  background-image: url(../imgs/home/seleccion_argentina.png);
+}
+
+.filter-section {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.filter-section h2 {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+.filter-section h3 {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+.filter-section a, .filter-section label {
+  font-size: 14px;
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  color: #909090;
+  line-height: 14px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.numbfield {
+  max-width: 80px;
+}
+
+.catalogo-main {
+  width: calc(100% - 96px);
+}
+
+.filter--titleNItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+}
+.filter--titleNItems .filter--items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-input-boxes {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-items: flex-end;
+  align-items: flex-end;
+}
+
+.send-button {
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 0 16px;
+  margin: 0;
+  font-size: 16px;
+  height: 28px;
+  max-height: 28px;
+  text-align: center;
+  justify-self: flex-start;
+  border-radius: 16px;
+}
+
+.product-container {
+  gap: 8px;
+  margin: 80px 0;
+}
+
+.product-card {
+  background-color: white;
+  width: calc(33.3333333333% - 6px);
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+}
+.product-card img {
+  width: calc(100% - 32px);
+}
+.product-card h4 {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+  margin: 0 16px;
+  padding-top: 16px;
+}
+.product-card p {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: green;
+  text-align: right;
+  margin-right: 16px;
+}
+
+.addToCart, .carritoMain .cart-bill-list .removeFromCart, .carritoMain .deleteContainer .deleteCart {
+  color: white;
+  background-color: black;
+  width: calc(100% - 16px);
+  margin: 16px;
+  padding: 12px 0;
+  border-style: none;
+  border-radius: 2rem;
+}
+
+.catalogo-main {
+  padding-top: 114px;
+}
+
+.carritoMain {
+  padding-top: 200px;
+  margin: 0 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 120px;
+}
+.carritoMain .deleteContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+}
+.carritoMain .deleteContainer .deleteCart {
+  width: fit-content;
+  margin: 0px;
+  padding: 12px 32px;
+  align-self: flex-end;
+}
+.carritoMain .cart-bill-list {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  align-content: center;
+  padding: 24px 0;
+}
+.carritoMain .cart-bill-list img {
+  margin-left: 24px;
+}
+.carritoMain .cart-bill-list .p-name {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  text-align: justify;
+  width: 60%;
+}
+.carritoMain .cart-bill-list .p-price {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+  color: green;
+  margin: 0;
+}
+.carritoMain .cart-bill-list .removeFromCart {
+  width: fit-content;
+  margin: 0px;
+  margin-right: 24px;
+  padding: 8px 14px 12px 14px;
+}
+.carritoMain .cart-bill-list .removeFromCart svg {
+  margin: 0;
+}
+
+/*# sourceMappingURL=estilo.css.map */

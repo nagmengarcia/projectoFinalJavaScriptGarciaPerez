@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin sora{
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    }
+
+@mixin soraThin{
+    @include sora();
+    font-weight: 100;
+}
+
+@mixin soraExtraLight{
+    @include sora();
+    font-weight: 200;
+}
+
+@mixin soraLight{
+    @include sora();
+    font-weight: 300;
+}
+
+@mixin soraRegular{
+    @include sora();
+    font-weight: 400;
+}
+
+@mixin soraMedium{
+    @include sora();
+    font-weight: 500;
+}
+
+@mixin soraSemiBold{
+    @include sora();
+    font-weight: 600;
+}
+
+@mixin soraBold{
+    @include sora();
+    font-weight: 700;
+}
+
+@mixin soraExtraBold{
+    @include sora();
+    font-weight: 800;
+}
