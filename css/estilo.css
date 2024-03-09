@@ -390,6 +390,7 @@ body {
   margin: 0;
 }
 .carritoMain .cart-bill-list .removeFromCart {
+  background-color: #EE4F4F;
   width: fit-content;
   margin: 0px;
   margin-right: 24px;
