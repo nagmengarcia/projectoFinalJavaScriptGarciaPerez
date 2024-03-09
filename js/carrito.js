@@ -55,44 +55,6 @@ function deleteSingleProduct(id){
     }
 };
 
-
-/* let x = document.getElementById("minus-14")
-
-let y = document.getElementById("plus-14")
-
-
-x.addEventListener("click", function () {
-    let cart = getCartLS();
-    let buscador = cart.find( (objeto) => objeto.id === 14)
-    let encontrarIndex = cart.indexOf(buscador)
-    console.log(encontrarIndex)
-    if(cart[encontrarIndex].cantidad > 1) {
-        console.log(cart[encontrarIndex])
-        cart[encontrarIndex].cantidad--
-        console.log(cart[encontrarIndex].cantidad)
-        saveCartLS(cart)
-        renderFinalCart()
-        renderCartSpan()
-        window.location.reload()
-    }
-})
-
-y.addEventListener("click", function () {
-    let cart = getCartLS();
-    let buscador = cart.find( (objeto) => objeto.id === 14)
-    let encontrarIndex = cart.indexOf(buscador)
-    console.log(encontrarIndex)
-    if(cart[encontrarIndex].cantidad > 1) {
-        console.log(cart[encontrarIndex])
-        cart[encontrarIndex].cantidad++
-        console.log(cart[encontrarIndex].cantidad)
-        saveCartLS(cart)
-        renderFinalCart()
-        renderCartSpan()
-        window.location.reload()
-    }
-}) */
-
 for (let i = 1; i <= (getProductsLS()).length; i++){
     quitarUnSoloItem(`minus-${i}`)
 }
@@ -120,6 +82,34 @@ function quitarUnSoloItem(myId) {
             renderCartSpan()
             window.location.reload()
             }
+        })
+    }
+}
+
+for (let i = 1; i <= (getProductsLS()).length; i++){
+    addItemInCartList(`plus-${i}`)
+}
+
+function addItemInCartList(myId) {
+    let item = document.getElementById(myId) || false
+    let chain = myId;
+    let parts = chain.split('-')
+    let numero = Number(parts[1]);
+    if(item !== false){
+        item.addEventListener("click", function(){
+            let cart = getCartLS();
+            let object = cart.find( (objeto) => objeto.id === numero)
+            let findIndex = cart.indexOf(object);
+            let myProduct = cart[findIndex]
+
+            console.log(myProduct)
+            myProduct.cantidad++
+            console.log(myProduct.cantidad)
+            saveCartLS(cart)
+            renderFinalCart()
+            renderCartSpan()
+            window.location.reload()
+            
         })
     }
 }
