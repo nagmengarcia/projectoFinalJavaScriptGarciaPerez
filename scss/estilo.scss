@@ -285,7 +285,6 @@ margin: 80px 0;
             @include soraRegular();
             margin: 0;
             text-align: justify;
-            width: 60%
         }
         .p-price{
             @include soraSemiBold();
@@ -306,4 +305,35 @@ margin: 80px 0;
 
         
     }
+}
+
+
+.itemCounter {
+    margin: 0;
+    justify-content: baseline;
+    align-items: baseline;
+    display: flex;
+    gap: 8px;
+    button{
+        background-color: black;
+        border: none;
+        border-radius: 100%;
+        padding: 8px 14px 12px 14px;
+    }
+    svg{
+        color: white
+    }
+    p {
+        margin: 0;
+        
+    }
+    
+}
+
+.productNameAndCounter {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
 }

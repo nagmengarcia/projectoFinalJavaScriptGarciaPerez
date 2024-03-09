@@ -379,7 +379,6 @@ body {
   font-weight: 400;
   margin: 0;
   text-align: justify;
-  width: 60%;
 }
 .carritoMain .cart-bill-list .p-price {
   font-family: "Sora", sans-serif;
@@ -398,6 +397,34 @@ body {
 }
 .carritoMain .cart-bill-list .removeFromCart svg {
   margin: 0;
+}
+
+.itemCounter {
+  margin: 0;
+  justify-content: baseline;
+  align-items: baseline;
+  display: flex;
+  gap: 8px;
+}
+.itemCounter button {
+  background-color: black;
+  border: none;
+  border-radius: 100%;
+  padding: 8px 14px 12px 14px;
+}
+.itemCounter svg {
+  color: white;
+}
+.itemCounter p {
+  margin: 0;
+}
+
+.productNameAndCounter {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
 }
 
 /*# sourceMappingURL=estilo.css.map */
