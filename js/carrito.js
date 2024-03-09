@@ -56,7 +56,7 @@ function deleteSingleProduct(id){
 };
 
 
-let x = document.getElementById("minus-14")
+/* let x = document.getElementById("minus-14")
 
 let y = document.getElementById("plus-14")
 
@@ -91,4 +91,35 @@ y.addEventListener("click", function () {
         renderCartSpan()
         window.location.reload()
     }
-})
+}) */
+
+for (let i = 1; i <= (getProductsLS()).length; i++){
+    quitarUnSoloItem(`minus-${i}`)
+}
+
+
+function quitarUnSoloItem(myId) {
+    let item = document.getElementById(myId) || false
+    let chain = myId;
+    let parts = chain.split('-')
+    let numero = Number(parts[1]);
+
+    if(item !== false){
+        item.addEventListener("click", function(){
+            let cart = getCartLS();
+            let object = cart.find( (objeto) => objeto.id === numero)
+            let findIndex = cart.indexOf(object);
+            let myProduct = cart[findIndex]
+
+            if( myProduct.cantidad > 1){
+            console.log(myProduct)
+            myProduct.cantidad--
+            console.log(myProduct.cantidad)
+            saveCartLS(cart)
+            renderFinalCart()
+            renderCartSpan()
+            window.location.reload()
+            }
+        })
+    }
+}

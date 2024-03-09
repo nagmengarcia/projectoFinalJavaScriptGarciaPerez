@@ -1,22 +1,21 @@
-var productos = [
-    {
-        id: 1,
-        nombre: "Champi King de carne",
-        imagen: "URL_DE_LA_IMAGEN",
-        descripcion: "DESCRIPCION_DEL_PRODUCTO",
-        precio: 8500,
-        categoria: "hamburguesas",
-        cantidad: 0
-    },
-    {
-        id: 2,
-        nombre: "Hamburguesa de queso tristongo",
-        imagen: "URL_DE_LA_IMAGEN",
-        descripcion: "DESCRIPCION_DEL_PRODUCTO",
-        precio: 5000,
-        categoria: "hamburguesas",
-        cantidad: 0
-    },
-    // Otros productos...
-];
+function agregarUnSoloItem(myId) {
+    let item = document.getElementById(myId) || false
+    let chain = myId;
+    let parts = chain.split('-')
+    let numero = Number(parts[1]);
 
+    if(item !== false){
+        let cart = getCartLS();
+        let object = cart.find( (objeto) => objeto.id === numero)
+        let findIndex = cart.indexOf(object);
+        if( cart[findIndex].cantidad > 1){
+            console.log(cart[encontrarIndex])
+            cart[encontrarIndex].cantidad--
+            console.log(cart[encontrarIndex].cantidad)
+            saveCartLS(cart)
+            renderFinalCart()
+            renderCartSpan()
+            window.location.reload()
+        }
+    }
+}
