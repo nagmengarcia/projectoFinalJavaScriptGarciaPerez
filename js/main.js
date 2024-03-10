@@ -1,4 +1,4 @@
-function agregarUnSoloItem(myId) {
+/* function agregarUnSoloItem(myId) {
     let item = document.getElementById(myId) || false
     let chain = myId;
     let parts = chain.split('-')
@@ -18,4 +18,4 @@ function agregarUnSoloItem(myId) {
             window.location.reload()
         }
     }
-}
+} */

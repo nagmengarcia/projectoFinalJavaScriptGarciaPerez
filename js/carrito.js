@@ -22,6 +22,7 @@ function renderFinalCart() {
     } else {
         a = `<h1 class="text-center">No hay productos agregados al carro</h1>`
     }
+    a+= `<button class="pay" id="pay"> Pagar </button>`
     document.getElementById('carritoMain').innerHTML = a;
 };
 renderFinalCart()
@@ -112,4 +113,46 @@ function addItemInCartList(myId) {
             
         })
     }
+}
+
+
+let pay = document.getElementById("pay") 
+pay.addEventListener("click", function(){
+    calculateFinalPrice()
+} )
+
+
+const calculateFinalPrice = () => {
+    let cart = getCartLS();
+
+    let prices = cart.map(function(objeto) {
+        return objeto.cantidad * objeto.price;
+    });
+
+    let totalPrice = prices.reduce(function (acc, price){
+        return acc + price;
+    },0)    
+
+    Swal.fire({
+        title: "Estas a un paso de completar tu compra",
+        text: `Tu monto es de $${totalPrice}`,
+        confirmButtonText:"Pagar",
+      }).then((result) => {
+        if(result.isConfirmed){
+            Swal.fire({
+                title: "Felicidades por tu compra",
+                icon: "success",
+                timer: 4500
+            }).then(()=>{    
+            localStorage.removeItem("cart")
+            window.location.reload()
+            })
+            
+        }
+      })
+
+      /* localStorage.removeItem("cart")
+      setTimeout(function(){
+        window.location.reload()
+      },3000) */
 }
