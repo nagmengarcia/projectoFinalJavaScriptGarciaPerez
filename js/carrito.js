@@ -31,7 +31,7 @@ renderCartSpan()
 const deleteAllButton = document.getElementById("deleteAll") || false;
 
 if (deleteAllButton !== false) {
-    deleteAllButton.addEventListener("click", () => {deleteCart(); renderFinalCart(); alert("kapoot carrito")})
+    deleteAllButton.addEventListener("click", () => {deleteCart(); renderFinalCart(); Swal.fire({title: "Se elimino el carrito"})})
 }
 
 for (let i = 1; i <= (getProductsLS()).length; i++){
@@ -143,7 +143,8 @@ const calculateFinalPrice = () => {
                 title: "Felicidades por tu compra",
                 icon: "success",
                 timer: 4500
-            }).then(()=>{    
+            }).then(()=>{
+    
             localStorage.removeItem("cart")
             window.location.reload()
             })
